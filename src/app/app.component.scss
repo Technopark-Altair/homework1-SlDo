@@ -57,7 +57,7 @@
 
 .input {
   @include defaultBorder;
-  @include placeholder($dark-text);
+  @include placeholder($dark-text, $default-color);
 
   outline: none;
   text-indent: 1rem;

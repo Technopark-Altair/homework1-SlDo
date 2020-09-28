@@ -19,12 +19,20 @@
   transition: all #{$time} linear;
 }
 
-@mixin placeholder($color) {
+@mixin placeholder($color, $focusColor) {
   &::placeholder { color: #{$color}; }
   &::-webkit-input-placeholder { color: #{$color}; }
   &::-moz-placeholder { color: #{$color}; }
   &:-moz-placeholder { color: #{$color}; }
   &:-ms-input-placeholder { color: #{$color}; }
+
+  &:focus {
+    &::placeholder { color: #{$focusColor}; }
+    &::-webkit-input-placeholder { color: #{$focusColor}; }
+    &::-moz-placeholder { color: #{$focusColor}; }
+    &:-moz-placeholder { color: #{$focusColor}; }
+    &:-ms-input-placeholder { color: #{$focusColor}; }
+  }
 }
 
 @mixin defaultBorder {
